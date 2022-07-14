@@ -1,5 +1,5 @@
 //
-//  Cash.swift
+//  Product.swift
 //  TesteDigio
 //
 //  Created by João Guilherme on 14/07/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Cash: Codable {
-    let title: String
-    let bannerURL: String
+struct ProductModel: Codable {
+    let name: String
+    let imageURL: String
     let description: String
 }

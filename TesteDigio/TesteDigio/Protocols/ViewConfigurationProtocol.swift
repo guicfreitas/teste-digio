@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol ViewConfiguration: AnyObject {
-    func setupConstraints()
     func buildViewHierarchy()
+    func setupConstraints()
     func setupViewConfiguration()
 }

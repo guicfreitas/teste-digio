@@ -8,6 +8,16 @@
 import UIKit
 
 class SpotlightCell: UICollectionViewCell {
+    // MARK: - Model
+    var model: SpotlightModel? {
+        didSet {
+            guard let model = model else {
+                return
+            }
+
+            bannerImageView.downloaded(from: model.bannerURL)
+        }
+    }
     // MARK: - Views
     private let bannerImageView: UIImageView = {
         let imageView = UIImageView()

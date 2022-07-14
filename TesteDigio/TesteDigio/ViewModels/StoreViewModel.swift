@@ -8,9 +8,7 @@
 import Foundation
 
 struct StoreViewModel {
-    var storeData: Store?
-
-    func makeData(completition: @escaping ((Store?) -> Void) ) {
+    func makeData(completition: @escaping ((StoreModel?) -> Void) ) {
         guard let api = URL(string: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products") else {
             return completition(nil)
         }
@@ -26,7 +24,7 @@ struct StoreViewModel {
             }
 
             do {
-                let result = try JSONDecoder().decode(Store.self, from: data)
+                let result = try JSONDecoder().decode(StoreModel.self, from: data)
                 completition(result)
             } catch {
                 print("entrou no catch")

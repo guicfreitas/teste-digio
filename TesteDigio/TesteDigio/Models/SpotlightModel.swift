@@ -1,5 +1,5 @@
 //
-//  Product.swift
+//  Spotlight.swift
 //  TesteDigio
 //
 //  Created by João Guilherme on 14/07/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Product: Codable {
+struct SpotlightModel: Codable {
     let name: String
-    let imageURL: String
+    let bannerURL: String
     let description: String
 }

@@ -8,13 +8,73 @@
 import UIKit
 
 class StoreViewController: UIViewController {
-    let storeViewModel = StoreViewModel()
-    var storeData: Store?
+    // MARK: - Views
+    private let storeView = StoreView()
 
+    // MARK: - Model
+    private var storeViewModel = StoreViewModel()
+    private var storeData: StoreModel? {
+        didSet {
+            DispatchQueue.main.async {
+                self.storeView.productsCollectionView.reloadData()
+                self.storeView.spotlightCollectionView.reloadData()
+                self.storeView.bannerImageView.downloaded(from: self.storeData?.cash.bannerURL ?? "")
+            }
+        }
+    }
+
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        storeViewModel.makeData { storeData in
-            self.storeData = storeData
+
+        storeViewModel.makeData(completition: { store in
+            self.storeData = store
+        })
+    }
+    override func loadView() {
+        view = storeView
+
+        storeView.spotlightCollectionView.delegate = self
+        storeView.spotlightCollectionView.dataSource = self
+
+        storeView.productsCollectionView.delegate = self
+        storeView.productsCollectionView.dataSource = self
+    }
+}
+
+extension StoreViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let storeData = self.storeData else {
+            return 0
         }
+        if collectionView == storeView.spotlightCollectionView {
+            return storeData.spotlight.count
+        } else if collectionView == storeView.productsCollectionView {
+            return storeData.products.count
+        }
+
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == storeView.spotlightCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCell.reuseIdentifier,
+                                                            for: indexPath) as? SpotlightCell else {
+                return UICollectionViewCell()
+            }
+            cell.model = storeData?.spotlight[indexPath.row]
+
+            return cell
+        } else if collectionView == storeView.productsCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier,
+                                                            for: indexPath) as? ProductCell else {
+                return UICollectionViewCell()
+            }
+            cell.model = storeData?.products[indexPath.row]
+
+            return cell
+        }
+        return UICollectionViewCell()
     }
 }

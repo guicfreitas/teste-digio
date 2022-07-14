@@ -8,6 +8,16 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
+    // MARK: - Model
+    var model: ProductModel? {
+        didSet {
+            guard let model = model else {
+                return
+            }
+
+            bannerImageView.downloaded(from: model.imageURL)
+        }
+    }
     // MARK: - Views
     private let bannerImageView: UIImageView = {
         let imageView = UIImageView()
@@ -26,10 +36,10 @@ extension ProductCell: ViewConfiguration {
         bannerImageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            bannerImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            bannerImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            bannerImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            bannerImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            bannerImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            bannerImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            bannerImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.10),
+            bannerImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.10)
         ])
     }
 
