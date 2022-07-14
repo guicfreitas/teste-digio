@@ -8,9 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let storeViewModel = StoreViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        storeViewModel.makeData()
         // Do any additional setup after loading the view.
     }
 }
