@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		793A342C287FD78100A30BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342B287FD78100A30BD5 /* AppDelegate.swift */; };
 		793A342E287FD78100A30BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342D287FD78100A30BD5 /* SceneDelegate.swift */; };
-		793A3430287FD78100A30BD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342F287FD78100A30BD5 /* ViewController.swift */; };
+		793A3430287FD78100A30BD5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342F287FD78100A30BD5 /* StoreViewController.swift */; };
 		793A3433287FD78100A30BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793A3431287FD78100A30BD5 /* Main.storyboard */; };
 		793A3435287FD78400A30BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793A3434287FD78400A30BD5 /* Assets.xcassets */; };
 		793A3438287FD78400A30BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793A3436287FD78400A30BD5 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,9 @@
 		793A3465287FDF2D00A30BD5 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A3464287FDF2D00A30BD5 /* Spotlight.swift */; };
 		793A3467287FE21C00A30BD5 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A3466287FE21C00A30BD5 /* StoreViewModel.swift */; };
 		793A346A287FE4D600A30BD5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A3469287FE4D600A30BD5 /* Store.swift */; };
+		793A34702880513100A30BD5 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A346F2880513100A30BD5 /* StoreView.swift */; };
+		793A34742880540700A30BD5 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A34732880540600A30BD5 /* ViewConfiguration.swift */; };
+		793A34772880549700A30BD5 /* ViewConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A34762880549700A30BD5 /* ViewConfigurationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,7 @@
 		793A3428287FD78100A30BD5 /* TesteDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793A342B287FD78100A30BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A342D287FD78100A30BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		793A342F287FD78100A30BD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		793A342F287FD78100A30BD5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		793A3432287FD78100A30BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		793A3434287FD78400A30BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		793A3437287FD78400A30BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		793A3464287FDF2D00A30BD5 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
 		793A3466287FE21C00A30BD5 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		793A3469287FE4D600A30BD5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		793A346F2880513100A30BD5 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		793A34732880540600A30BD5 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		793A34762880549700A30BD5 /* ViewConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfigurationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +115,13 @@
 		793A342A287FD78100A30BD5 /* TesteDigio */ = {
 			isa = PBXGroup;
 			children = (
-				793A345F287FDD7800A30BD5 /* ViewControllers */,
-				793A345E287FDD2600A30BD5 /* ViewModels */,
-				793A345D287FDD1C00A30BD5 /* Views */,
+				793A347928805F1400A30BD5 /* Resources */,
+				793A347828805EDA00A30BD5 /* Application */,
 				793A345C287FDD1500A30BD5 /* Models */,
-				793A342B287FD78100A30BD5 /* AppDelegate.swift */,
-				793A342D287FD78100A30BD5 /* SceneDelegate.swift */,
-				793A3434287FD78400A30BD5 /* Assets.xcassets */,
-				793A3439287FD78400A30BD5 /* Info.plist */,
+				793A345D287FDD1C00A30BD5 /* Views */,
+				793A345E287FDD2600A30BD5 /* ViewModels */,
+				793A34752880548000A30BD5 /* Protocols */,
+				793A34712880538300A30BD5 /* Extensions */,
 			);
 			path = TesteDigio;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 		793A345D287FDD1C00A30BD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				793A346C288050CB00A30BD5 /* Store */,
 				793A3431287FD78100A30BD5 /* Main.storyboard */,
 				793A3436287FD78400A30BD5 /* LaunchScreen.storyboard */,
 			);
@@ -166,12 +172,47 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		793A345F287FDD7800A30BD5 /* ViewControllers */ = {
+		793A346C288050CB00A30BD5 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				793A342F287FD78100A30BD5 /* ViewController.swift */,
+				793A346F2880513100A30BD5 /* StoreView.swift */,
+				793A342F287FD78100A30BD5 /* StoreViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Store;
+			sourceTree = "<group>";
+		};
+		793A34712880538300A30BD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				793A34732880540600A30BD5 /* ViewConfiguration.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		793A34752880548000A30BD5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				793A34762880549700A30BD5 /* ViewConfigurationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		793A347828805EDA00A30BD5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				793A342D287FD78100A30BD5 /* SceneDelegate.swift */,
+				793A342B287FD78100A30BD5 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		793A347928805F1400A30BD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				793A3434287FD78400A30BD5 /* Assets.xcassets */,
+				793A3439287FD78400A30BD5 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +368,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				793A3465287FDF2D00A30BD5 /* Spotlight.swift in Sources */,
-				793A3430287FD78100A30BD5 /* ViewController.swift in Sources */,
+				793A3430287FD78100A30BD5 /* StoreViewController.swift in Sources */,
 				793A3461287FDEEE00A30BD5 /* Product.swift in Sources */,
+				793A34742880540700A30BD5 /* ViewConfiguration.swift in Sources */,
 				793A346A287FE4D600A30BD5 /* Store.swift in Sources */,
 				793A3463287FDF1E00A30BD5 /* Cash.swift in Sources */,
+				793A34772880549700A30BD5 /* ViewConfigurationProtocol.swift in Sources */,
 				793A342C287FD78100A30BD5 /* AppDelegate.swift in Sources */,
 				793A342E287FD78100A30BD5 /* SceneDelegate.swift in Sources */,
+				793A34702880513100A30BD5 /* StoreView.swift in Sources */,
 				793A3467287FE21C00A30BD5 /* StoreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

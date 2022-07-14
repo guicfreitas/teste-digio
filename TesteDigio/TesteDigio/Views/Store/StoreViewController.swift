@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StoreViewController: UIViewController {
     let storeViewModel = StoreViewModel()
+    var storeData: Store?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        storeViewModel.makeData()
-        // Do any additional setup after loading the view.
+        storeViewModel.makeData { storeData in
+            self.storeData = storeData
+        }
     }
 }

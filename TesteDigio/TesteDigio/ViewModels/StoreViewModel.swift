@@ -8,9 +8,9 @@
 import Foundation
 
 struct StoreViewModel {
-    var storeData: Store? = nil
-    
-    func makeData(completition: @escaping ((Store?) -> ()) ){
+    var storeData: Store?
+
+    func makeData(completition: @escaping ((Store?) -> Void) ) {
         guard let api = URL(string: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products") else {
             return completition(nil)
         }
