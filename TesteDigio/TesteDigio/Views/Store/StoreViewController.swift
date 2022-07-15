@@ -19,6 +19,7 @@ class StoreViewController: UIViewController {
                 self.storeView.productsCollectionView.reloadData()
                 self.storeView.spotlightCollectionView.reloadData()
                 self.storeView.bannerImageView.downloaded(from: self.storeData?.cash.bannerURL ?? "")
+                self.storeView.cashTitle.text = self.storeData?.cash.title
             }
         }
     }

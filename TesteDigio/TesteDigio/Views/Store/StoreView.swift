@@ -22,10 +22,10 @@ class StoreView: UIView {
         return collection
     }()
 
-    private let cashTitle: UILabel = {
+    let cashTitle: UILabel = {
         let label = UILabel()
-        label.text = "Produtos"
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.text = ""
+        label.font = .preferredFont(forTextStyle: .title2).bold()
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 1
         label.textAlignment = .left
@@ -39,10 +39,10 @@ class StoreView: UIView {
         return imageView
     }()
 
-    private let productTitle: UILabel = {
+    let productTitle: UILabel = {
         let label = UILabel()
         label.text = "Produtos"
-        label.font = .preferredFont(forTextStyle: .title2)
+        label.font = .preferredFont(forTextStyle: .title2).bold()
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 1
         label.textAlignment = .left
@@ -112,7 +112,7 @@ extension StoreView: ViewConfiguration {
             cashTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .init(20).relatedToScrenn),
             cashTitle.topAnchor.constraint(equalTo: spotlightCollectionView.bottomAnchor,
                                         constant: .init(30).relatedToScreenHeight),
-            cashTitle.heightAnchor.constraint(equalToConstant: .init(30).relatedToScreenHeight)
+            cashTitle.heightAnchor.constraint(equalToConstant: .init(32).relatedToScreenHeight)
         ])
     }
 
