@@ -1,0 +1,12 @@
+scheme("TesteDigio")
+#provide provisioning profiles to use
+export_options({
+   method: "app-store",
+   provisioningProfiles: { 
+     "guicf.TesteDigio" => "match AppStore guicf.TesteDigio",
+        }
+})
+
+output_directory("./fastlane/builds")
+include_bitcode(false)
+include_symbols(false)
