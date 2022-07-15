@@ -10,6 +10,9 @@
 		792E09B228807F1200806EA3 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09B128807F1200806EA3 /* CGFloat+Extension.swift */; };
 		792E09B428808C3F00806EA3 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09B328808C3F00806EA3 /* UIImageView+Extension.swift */; };
 		792E09B62880FD9300806EA3 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09B52880FD9300806EA3 /* UIFont.swift */; };
+		792E09B9288109B200806EA3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09B8288109B200806EA3 /* ProductView.swift */; };
+		792E09BB288109D200806EA3 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09BA288109D200806EA3 /* ProductViewController.swift */; };
+		792E09BD288127F100806EA3 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E09BC288127F100806EA3 /* UIImage+Extensions.swift */; };
 		793A342C287FD78100A30BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342B287FD78100A30BD5 /* AppDelegate.swift */; };
 		793A342E287FD78100A30BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342D287FD78100A30BD5 /* SceneDelegate.swift */; };
 		793A3430287FD78100A30BD5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A342F287FD78100A30BD5 /* StoreViewController.swift */; };
@@ -52,6 +55,9 @@
 		792E09B128807F1200806EA3 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		792E09B328808C3F00806EA3 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		792E09B52880FD9300806EA3 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		792E09B8288109B200806EA3 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		792E09BA288109D200806EA3 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		792E09BC288127F100806EA3 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		793A3428287FD78100A30BD5 /* TesteDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793A342B287FD78100A30BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A342D287FD78100A30BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 		792E09B72881059600806EA3 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				792E09B8288109B200806EA3 /* ProductView.swift */,
+				792E09BA288109D200806EA3 /* ProductViewController.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 		793A345D287FDD1C00A30BD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				792E09B72881059600806EA3 /* Product */,
 				793A346C288050CB00A30BD5 /* Store */,
 				793A3431287FD78100A30BD5 /* Main.storyboard */,
 				793A3436287FD78400A30BD5 /* LaunchScreen.storyboard */,
@@ -192,7 +201,6 @@
 		793A346C288050CB00A30BD5 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				792E09B72881059600806EA3 /* Product */,
 				793A347A288077CE00A30BD5 /* Cells */,
 				793A346F2880513100A30BD5 /* StoreView.swift */,
 				793A342F287FD78100A30BD5 /* StoreViewController.swift */,
@@ -207,6 +215,7 @@
 				792E09B128807F1200806EA3 /* CGFloat+Extension.swift */,
 				792E09B328808C3F00806EA3 /* UIImageView+Extension.swift */,
 				792E09B52880FD9300806EA3 /* UIFont.swift */,
+				792E09BC288127F100806EA3 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,7 +411,9 @@
 				793A3465287FDF2D00A30BD5 /* SpotlightModel.swift in Sources */,
 				793A3430287FD78100A30BD5 /* StoreViewController.swift in Sources */,
 				793A3461287FDEEE00A30BD5 /* ProductModel.swift in Sources */,
+				792E09B9288109B200806EA3 /* ProductView.swift in Sources */,
 				793A34742880540700A30BD5 /* ViewConfiguration+Extension.swift in Sources */,
+				792E09BB288109D200806EA3 /* ProductViewController.swift in Sources */,
 				793A347E2880782B00A30BD5 /* ProductCell.swift in Sources */,
 				793A346A287FE4D600A30BD5 /* StoreModel.swift in Sources */,
 				793A3463287FDF1E00A30BD5 /* CashModel.swift in Sources */,
@@ -412,6 +423,7 @@
 				793A342E287FD78100A30BD5 /* SceneDelegate.swift in Sources */,
 				792E09B62880FD9300806EA3 /* UIFont.swift in Sources */,
 				793A34702880513100A30BD5 /* StoreView.swift in Sources */,
+				792E09BD288127F100806EA3 /* UIImage+Extensions.swift in Sources */,
 				792E09B228807F1200806EA3 /* CGFloat+Extension.swift in Sources */,
 				793A3467287FE21C00A30BD5 /* StoreViewModel.swift in Sources */,
 			);

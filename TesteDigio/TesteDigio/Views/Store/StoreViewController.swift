@@ -79,6 +79,17 @@ extension StoreViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         return UICollectionViewCell()
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let storeData = storeData else {
+            return
+        }
+
+        if collectionView == storeView.productsCollectionView {
+            let productViewController = ProductViewController(model: storeData.products[indexPath.row])
+            self.navigationController?.pushViewController(productViewController, animated: true)
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {

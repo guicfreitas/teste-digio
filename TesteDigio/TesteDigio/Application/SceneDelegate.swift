@@ -22,6 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard scene as? UIWindowScene != nil else {
             return
         }
+
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window?.windowScene = windowScene
+        window?.makeKeyAndVisible()
+
+        let storeViewController = StoreViewController()
+        let navViewController = UINavigationController(rootViewController: storeViewController)
+        window?.rootViewController = navViewController
     }
 
     @available(iOS 13.0, *)
