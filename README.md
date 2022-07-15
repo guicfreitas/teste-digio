@@ -32,6 +32,8 @@
 - Interface feita inteiramente com ViewCode
 - Código Limpo
 - Código Legivel, seguindo os padrões e convenções de desenvolvimento Swift
+- Seguindo as principais regras do SwiftLint
+- Com as principais lanes implementadas no fastlane
 
 ## 📕Instalação
 
@@ -59,6 +61,8 @@ open .xcodeproj
 
 - [Swift](https://www.apple.com/br/swift/)
 - [UIKit](https://developer.apple.com/documentation/uikit/)
+- [Fastlane](https://fastlane.tools)
+- [SwiftLint](https://github.com/realm/SwiftLint)
 
 ## 📝License
 
