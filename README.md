@@ -39,7 +39,7 @@
 - [Xcode 12.5+](https://developer.apple.com/xcode/)
 
 **Recomendações**
--   É recomendandoo que você possua ao menos o MacOs BigSur
+-   É recomendando que você possua ao menos o MacOs BigSur
 
 **Vamos dividir em duas etapas**
 1. Clone este repositório
