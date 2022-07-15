@@ -23,11 +23,18 @@ class ProductCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "noImage")
         return imageView
     }()
 
     override func layoutSubviews() {
         setupViewConfiguration()
+        setUpAditionalConfiguration()
+        self.backgroundColor = .white
+        layer.shadowPath = UIBezierPath(
+                    roundedRect: bounds,
+                    cornerRadius: 10
+                ).cgPath
     }
 }
     // MARK: - ViewCode
@@ -45,6 +52,19 @@ extension ProductCell: ViewConfiguration {
 
     func buildViewHierarchy() {
         self.addSubview(bannerImageView)
+    }
+
+    func setUpAditionalConfiguration() {
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+
+        layer.cornerRadius = 10
+        layer.masksToBounds = false
+
+        layer.shadowRadius = 2.5
+        layer.shadowOpacity = 0.20
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 1, height: 2)
     }
 }
     // MARK: - Reuse Identifier

@@ -28,6 +28,7 @@ class SpotlightCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         setupViewConfiguration()
+        setUpAditionalConfiguration()
     }
 }
     // MARK: - ViewCode
@@ -45,6 +46,16 @@ extension SpotlightCell: ViewConfiguration {
 
     func buildViewHierarchy() {
         self.addSubview(bannerImageView)
+    }
+
+    func setUpAditionalConfiguration() {
+        bannerImageView.layer.cornerRadius = 20
+        bannerImageView.clipsToBounds = true
+
+        layer.shadowRadius = 2.5
+        layer.shadowOpacity = 0.20
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 1, height: 2)
     }
 }
     // MARK: - Reuse Identifier

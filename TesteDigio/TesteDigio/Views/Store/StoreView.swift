@@ -13,7 +13,7 @@ class StoreView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.91, height: UIScreen.main.bounds.height * 0.40)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.91, height: UIScreen.main.bounds.height * 0.25)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(SpotlightCell.self, forCellWithReuseIdentifier: SpotlightCell.reuseIdentifier)
         collection.backgroundColor = .white
@@ -52,7 +52,7 @@ class StoreView: UIView {
     let productsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 20
         layout.itemSize = CGSize(width: UIScreen.main.bounds.height * 0.20, height: UIScreen.main.bounds.height * 0.20)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
@@ -101,7 +101,7 @@ extension StoreView: ViewConfiguration {
                                                         constant: .init(20).relatedToScrenn),
             spotlightCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                                         constant: .init(20).relatedToScrenn),
-            spotlightCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.22)
+            spotlightCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.30)
         ])
     }
 
@@ -124,8 +124,12 @@ extension StoreView: ViewConfiguration {
                                             constant: .init(20).relatedToScreenHeight),
             bannerImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .init(20).relatedToScrenn),
             bannerImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.91),
-            bannerImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.20)
+            bannerImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.15)
         ])
+
+        bannerImageView.layer.cornerRadius = 10
+        bannerImageView.clipsToBounds = true
+
     }
 
     func makeProductTitleConstraints() {
@@ -149,7 +153,7 @@ extension StoreView: ViewConfiguration {
                                                         constant: .init(20).relatedToScrenn),
             productsCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                                         constant: .init(20).relatedToScrenn),
-            productsCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.20)
+            productsCollectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.22)
         ])
     }
 }
