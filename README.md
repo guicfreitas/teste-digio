@@ -12,7 +12,7 @@
       </a>
       <br/>
       <a href="#">
-          <img src="https://img.shields.io/static/v1?label=Available%20on&message=iOS/iPadOS&color=000000&style=for-the-badge&logo=Apple" alt="Available on: iOS">
+          <img src="https://img.shields.io/static/v1?label=Available%20on&message=iOS&color=000000&style=for-the-badge&logo=Apple" alt="Available on: iOS">
       </a>
     </p>
 </div>
