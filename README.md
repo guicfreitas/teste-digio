@@ -17,7 +17,7 @@
     </p>
 </div>
 
-## Sumario
+## Sumário
 
 <p align="center">
  <a href="#revised-concepts">Considerações</a> • 
